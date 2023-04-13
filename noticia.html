@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="css/noticia2.css">
+    <meta charset="UTF-8">
+    <script src="js/noticia1.js"></script>
+    <body>
+        <div class="center">
+            <h1>Noticia</h1>
+        <h3>
+            <button onclick="darkMode()">activado</button>
+            <button onclick="lightMode()">desactivado</button>
+          </h3>
+              <script>
+                function darkMode() {
+                  var element = document.body;
+                  var content = document.getElementById("DarkModetext");
+                  element.className = "dark-mode";
+                }
+                function lightMode() {
+                  var element = document.body;
+                  var content = document.getElementById("DarkModetext");
+                  element.className = "light-mode";
+                }
+    </script>
+    </body>
+    <meta charset="utf-8">
+ 
+    <title>Ejemplo scroll de noticias</title>
+ 
+    <style type="text/css">
+    </style>
+ 
+    <script type="text/javascript">
+        // determina el numero de pixeles que se moveran las noticias para
+        // cada iteracion en milisegundos de "speedjump"
+        var scrollspeed=1;
+        // determina la velocidad en milisgundos
+        var speedjump=30;
+        // segundos antes de empezar el movimiento
+        var startdelay= 1;
+        // posicion inicial superior en pixeles para cuando inicia
+        var topspace=-10;
+        // altura del marco donde se mostraran las noticias
+        // Si se modifica la altura del contenedor de las noticas hay que
+        // modificar tambien este valor
+        var frameheight=270;
+ 
+        // variable temporal que variara su valor en función de si estan las
+        // noticias en movimiento o paradas
+        current=scrollspeed;
+ 
+        /**
+         * Inicio del scroll
+         * Esta función es llamada en el body de la pagina.
+         * Tiene que recibir el id del scroll
+         */
+        function scrollStart()
+        {
+            dataobj = document.getElementById("scroll");
+            // cogemos la altura maxima de la capa de las noticias
+            alturaNoticias = dataobj.offsetHeight;
+            // posicionamos la capa del scroll en su posicion inicial
+            dataobj.style.top = topspace + 'px';
+ 
+            setTimeout("scrolling()", (startdelay * 1000));
+        }
+ 
+        /**
+         * Funcion que realiza el movimiento
+         */
+        function scrolling() {
+            // Restamos a la propiedad top de la capa el valor en pixeles
+            // establecido en la variable "scrollspeed", para hacer el
+            // movimiento hacia arriba.
+            dataobj.style.top = parseInt(dataobj.style.top) - scrollspeed + 'px';
+            // Si la capa ha sobrepasado la altura del area por donde se muestran
+            // las noticias ("alturaNoticias")
+            if (parseInt(dataobj.style.top) < alturaNoticias * (-1))
+            {
+                // Posicionamos la capa en la parte inferior del recuadro, para
+                // que simule que vienen las noticias de la parte inferior
+                dataobj.style.top = frameheight + 'px';
+                setTimeout("scrolling()", 0);
+            }else{
+                setTimeout("scrolling()", speedjump);
+            }
+        }
+    </script>
+    
+</head>
+ 
+<body onLoad="scrollStart();">
+ 
+
+<div class="scrollWrapper" onMouseover="scrollspeed=0" onMouseout="scrollspeed=current">
+    <div class="scrollTitle">Últimas Noticias</div>
+    <div id="scroll" >
+ 
+        <div class="title">Primera Noticia</div>
+        <div class="content">Contenido de ejemplo para el scroll de noticias personalizable. En el contenido puedes añadir cualquier codigo HTML, incluidos enlaces <a href="http://www.lawebdelprogramador.com" target="_top">La Web del programador</a>
+        </div>
+ 
+        <div class="title">Segunda Noticia</div>
+        <div class="content">Contenido de ejemplo para el scroll de noticias personalizable. En el contenido puedes añadir cualquier codigo HTML, incluidos enlaces <a href="http://www.lawebdelprogramador.com" target="_top">La Web del programador</a>
+        </div>
+ 
+        <div class="title">Tercera Noticia</div>
+        <div class="content">Contenido de ejemplo para el scroll de noticias personalizable. En el contenido puedes añadir cualquier codigo HTML, incluidos enlaces <a href="http://www.lawebdelprogramador.com" target="_top">La Web del programador</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

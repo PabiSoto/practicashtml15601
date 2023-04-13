@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/calificaciones2.css">
+    <meta charset="UTF-8">
+    <title>Calificaciones del alumno</title>
+    <script src="./js/calificaciones1.js"></script>
+  </head>
+  
+  <body>
+    <h1>Calificaciones del alumno</h1>
+    <h2 id="DarkModetext">Modo oscuro</h2>
+<h3>
+  <button onclick="darkMode()">activado</button>
+  <button onclick="lightMode()">desactivado</button>
+</h3>
+    
+    <script>
+      function darkMode() {
+        var element = document.body;
+        var content = document.getElementById("DarkModetext");
+        element.className = "dark-mode";
+      }
+      function lightMode() {
+        var element = document.body;
+        var content = document.getElementById("DarkModetext");
+        element.className = "light-mode";
+      }
+      
+    </script>
+
+    <form>
+      <label for="calificacion1">Calificación 1:</label>
+      <input type="number" id="calificacion1" name="calificacion1"><br>
+      <label for="calificacion2">Calificación 2:</label>
+      <input type="number" id="calificacion2" name="calificacion2"><br>
+      <label for="calificacion3">Calificación 3:</label>
+      <input type="number" id="calificacion3" name="calificacion3"><br><br>
+      <input type="button" value="Calcular promedio" onclick="calcularPromedio()">
+
+      
+    </form>
+    <p id="resultado"></p>
+  </body>
+</html>

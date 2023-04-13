@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/comparador2.css">
+	<title>Find el número mayor</title>
+	<script src="js/comparador1.js"></script>
+	
+    </head>
+<body>
+	<h1>Encontrar el número mayor</h1>
+	<h2 id="DarkModetext">Modo oscuro</h2>
+    <h3>
+      <button onclick="darkMode()">activado</button>
+      <button onclick="lightMode()">desactivado</button>
+    </h3>
+    
+    <script>
+      function darkMode() {
+        var element = document.body;
+        var content = document.getElementById("DarkModetext");
+        element.className = "dark-mode";
+      }
+      function lightMode() {
+        var element = document.body;
+        var content = document.getElementById("DarkModetext");
+        element.className = "light-mode";
+      }
+    </script>
+	
+	<form>
+		<label>Ingrese el primer número:</label>
+		<input type="number" id="num1">
+		<br><br>
+		<label>Ingrese el segundo número:</label>
+		<input type="number" id="num2">
+		<br><br>
+		<input type="button" value="Encontrar el número mayor" onclick="encontrarMayor()">
+	</form>
+	<br><br>
+	<p id="Resultado"></p >
+</body>
+</html>

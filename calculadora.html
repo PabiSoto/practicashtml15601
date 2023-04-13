@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/calculadora2.css">
+    <meta charset="UTF-8">
+    <title>Calificaciones del alumno</title>
+    <script src="js/calculadora1.js"></script>
+  </head>
+
+</head>
+<body>
+	<div class="center">
+        <h1>Calculadora</h1>
+    <h3>
+        <button onclick="darkMode()">activado</button>
+        <button onclick="lightMode()">desactivado</button>
+      </h3>
+          <script>
+            function darkMode() {
+              var element = document.body;
+              var content = document.getElementById("DarkModetext");
+              element.className = "dark-mode";
+            }
+            function lightMode() {
+              var element = document.body;
+              var content = document.getElementById("DarkModetext");
+              element.className = "light-mode";
+            }
+</script>
+</body>
+<center>
+  <table>
+    <tr>
+      <td colspan="4"><button id="result">0</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="add('1')">1</button></td>
+      <td><button onclick="add('2')">2</button></td>
+      <td><button onclick="add('3')">3</button></td>
+      <td><button onclick="add('+')">+</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="add('4')">4</button></td>
+      <td><button onclick="add('5')">5</button></td>
+      <td><button onclick="add('6')">6</button></td>
+      <td><button onclick="add('-')">-</button></td>
+    </tr>
+    <tr>
+      <td><button onclick="add('7')">7</button></td>
+      <td><button onclick="add('8')">8</button></td>
+      <td><button onclick="add('9')">9</button></td>
+      <td><button onclick="add('*')">*</button></td>
+    </tr>
+    <tr>
+      <td colspan="3"><button onclick="add('0')">0</button></td>
+      <td colspan="3"><button onclick="add('/')">/</button></td>          
+    </tr>
+    <tr>
+      <td colspan="2"><button onclick="del()" class="ac">AC</button></td>
+      <td><button onclick="add('.')">.</button></td>
+      <td><button onclick="calc()">=</button></td>            
+    </tr>
+  
+  </table>
+</center>
+</html>

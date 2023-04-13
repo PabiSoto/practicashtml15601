@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Memorama</title>
+    <link rel="stylesheet" type="text/css" href="css/juego2.css">
+
+  </head>
+</head>
+<body>
+	<div class="center">
+        <h1>Juego</h1>
+    <h3>
+        <button onclick="darkMode()">activado</button>
+        <button onclick="lightMode()">desactivado</button>
+      </h3>
+          <script>
+            function darkMode() {
+              var element = document.body;
+              var content = document.getElementById("DarkModetext");
+              element.className = "dark-mode";
+            }
+            function lightMode() {
+              var element = document.body;
+              var content = document.getElementById("DarkModetext");
+              element.className = "light-mode";
+            }
+</script>
+</body>
+  <body>
+    <div class="container">
+      <div class="card" data-framework="a">
+        <img class="front-face" src="IMAGENES/1.png">
+        <img class="back-face" src="IMAGENES/alumno.png">
+      </div>
+      <div class="card" data-framework="b">
+        <img class="front-face" src="IMAGENES/2.png">
+        <img class="back-face" src="IMAGENES/alumno.png">
+      </div>
+        <div class="container">
+          <div class="card" data-framework="a">
+            <img class="front-face" src="IMAGENES/1.png">
+            <img class="back-face" src="IMAGENES/alumno.png">
+          </div>
+          <div class="card" data-framework="b">
+            <img class="front-face" src="IMAGENES/2.png">
+            <img class="back-face" src="IMAGENES/alumno.png">
+          </div>
+          
+    </div>
+    <script src="js/juego1.js"></script>
+  </body>
+</html>

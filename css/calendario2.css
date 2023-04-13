@@ -1,0 +1,29 @@
+body{
+    color:rgb(25, 54, 34);
+    margin: 10;
+    padding: 10;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	background:rgb(255, 255, 255);
+	font-size:small;
+}
+
+h1{
+    color:black;
+    margin: 10;
+    padding: 5;
+    background-color:rgb(179, 79, 204);
+    font-size:xx-large;
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.dark-mode {
+    background-color: black;
+    color: white;
+  }
+  .light-mode {
+    background-color: white;
+    color: black;
+}
+

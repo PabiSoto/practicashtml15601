@@ -1,0 +1,51 @@
+body{
+    color:rgb(25, 54, 34);
+    margin: 10;
+    padding: 10;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+	background:rgb(255, 255, 255);
+	font-size:small;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+  }
+  .light-mode {
+    background-color: white;
+    color: black;
+}
+
+header {
+    background:crimson;
+
+    color: white;
+    text-align: center;
+  }
+ 
+.addBtn {
+  width: 25%;
+  padding: 10px;
+  margin-left:0;
+  background: #d9d9d9;
+  color: #555;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+ul li:nth-child(odd) {
+    background: #b2bec3;
+  }
+
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+

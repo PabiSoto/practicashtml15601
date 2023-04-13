@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/descuento2.css">
+    <title>Descuentos en autos</title>
+  </head>
+  <body>
+    <h1>Calculadora de descuentos en autos</h1>
+    <h2 id="DarkModetext">Modo oscuro</h2>
+    <h3>
+      <button onclick="darkMode()">activado</button>
+      <button onclick="lightMode()">desactivado</button>
+    </h3>
+    
+    <script>
+      function darkMode() {
+        var element = document.body;
+        var content = document.getElementById("DarkModetext");
+        element.className = "dark-mode";
+      }
+      function lightMode() {
+        var element = document.body;
+        var content = document.getElementById("DarkModetext");
+        element.className = "light-mode";
+      }
+    </script>
+
+    <form id="auto-form">
+      <label for="marca-input">Marca:</label>
+      <input type="text" id="marca-input" name="marca"><br><br>
+      <label for="modelo-input">Modelo:</label>
+      <input type="text" id="modelo-input" name="modelo"><br><br>
+      <button type="submit">Calcular descuento</button>
+    </form>
+    <p id="descuento-output"></p>
+    <script src="js/descuento1.js"></script>
+  </body>
+</html>
